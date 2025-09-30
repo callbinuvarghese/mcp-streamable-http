@@ -1,0 +1,7 @@
+server
+---------------
+npm install
+npm run build
+node build/index.js
+
+built and deployed on GCP Cloud run

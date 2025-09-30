@@ -1,0 +1,378 @@
+client
+---------------
+npm install
+npm run build
+node build/index.js
+
+Change the .env file with the URL of the MCP_SERVER_URL
+
+PS C:\Users\binu_\source\node\mcp-samples\server\client> node build/index.js
+[INFO] Using URL from Environment Variable (MCP_SERVER_URL): https://mcp-streamable-http-770535842811.us-east1.run.app/mcp
+Connected to server
+LoggingMessageNotificationSchema received:   {
+  method: 'notifications/message',
+  params: { level: 'info', data: 'SSE Connection established' }
+}
+Available tools: [
+  {
+    name: 'single-greeting-3a8c4878-87af-4857-9b21-e7f2ae96bfd0',
+    description: 'Greet the user once.',
+    inputSchema: { type: 'object', properties: [Object], required: [Array] }
+  },
+  {
+    name: 'multi-great',
+    description: 'Greet the user multiple times with delay in between.',
+    inputSchema: { type: 'object', properties: [Object], required: [Array] }
+  }
+]
+
+Calling tool:  single-greeting-3a8c4878-87af-4857-9b21-e7f2ae96bfd0
+results:
+- Hey itsuki! Welcome to itsuki's world!
+
+Calling tool:  multi-great
+LoggingMessageNotificationSchema received:   {
+  method: 'notifications/message',
+  params: { level: 'info', data: 'First greet to itsuki' }
+}
+LoggingMessageNotificationSchema received:   {
+  method: 'notifications/message',
+  params: { level: 'info', data: 'Message 1 at 2025-09-30T15:49:40.776Z' }
+}
+LoggingMessageNotificationSchema received:   {
+  method: 'notifications/message',
+  params: { level: 'info', data: 'Second greet to itsuki' }
+}
+LoggingMessageNotificationSchema received:   {
+  method: 'notifications/message',
+  params: { level: 'info', data: 'Message 2 at 2025-09-30T15:49:41.776Z' }
+}
+LoggingMessageNotificationSchema received:   {
+  method: 'notifications/message',
+  params: { level: 'info', data: 'Streaming complete!' }
+}
+results:
+- Hope you enjoy your day!
+ToolListChangedNotificationSchema received:   { method: 'notifications/tools/list_changed' }
+Available tools: [
+  {
+    name: 'single-greeting-e003b626-a1ab-44a8-a1c7-61c4dac33ded',
+    description: 'Greet the user once.',
+    inputSchema: { type: 'object', properties: [Object], required: [Array] }
+  },
+  {
+    name: 'multi-great',
+    description: 'Greet the user multiple times with delay in between.',
+    inputSchema: { type: 'object', properties: [Object], required: [Array] }
+  }
+]
+ToolListChangedNotificationSchema received:   { method: 'notifications/tools/list_changed' }
+Available tools: [
+  {
+    name: 'single-greeting-f2453f26-4586-4c47-bb2a-3026e7a5dcfc',
+    description: 'Greet the user once.',
+    inputSchema: { type: 'object', properties: [Object], required: [Array] }
+  },
+  {
+    name: 'multi-great',
+    description: 'Greet the user multiple times with delay in between.',
+    inputSchema: { type: 'object', properties: [Object], required: [Array] }
+  }
+]
+.....
+keeps repeating ToolListChangedNotificationSchema received: 
+
+
+
+PS C:\Users\binu_\source\node\mcp-samples\server\client> node build/index.js
+[INFO] Using URL from Environment Variable (MCP_SERVER_URL): https://mcp-health-node-v1-770535842811.us-east1.run.app/mcp
+Connected to server
+Available tools: [
+  {
+    name: 'find_patient',
+    description: 'Search for a patient by demographics',
+    inputSchema: { type: 'object', properties: [Object], required: [Array] }
+  },
+  {
+    name: 'search_patients',
+    description: 'Search for a patient by demographics',
+    inputSchema: { type: 'object', properties: [Object], required: [] }
+  },
+  {
+    name: 'get_patient_summary_data',
+    description: 'Get a summary of all health data for a patient',
+    inputSchema: { type: 'object', properties: [Object], required: [Array] }
+  },
+  {
+    name: 'get_patient_observations',
+    description: 'Get observations (vitals, labs) for a patient',
+    inputSchema: { type: 'object', properties: [Object], required: [Array] }
+  },
+  {
+    name: 'get_patient_conditions',
+    description: 'Get medical conditions/diagnoses for a patient',
+    inputSchema: { type: 'object', properties: [Object], required: [Array] }
+  },
+  {
+    name: 'get_patient_medications',
+    description: 'Get medication orders for a patient',
+    inputSchema: { type: 'object', properties: [Object], required: [Array] }
+  },
+  {
+    name: 'get_patient_encounters',
+    description: 'Get healthcare encounters/visits for a patient',
+    inputSchema: { type: 'object', properties: [Object], required: [Array] }
+  },
+  {
+    name: 'get_patient_allergies',
+    description: 'Get allergies and intolerances for a patient',
+    inputSchema: { type: 'object', properties: [Object], required: [Array] }
+  },
+  {
+    name: 'get_patient_procedures',
+    description: 'Get procedures performed on a patient',
+    inputSchema: { type: 'object', properties: [Object], required: [Array] }
+  },
+  {
+    name: 'get_patient_careplans',
+    description: 'Get care plans for a patient',
+    inputSchema: { type: 'object', properties: [Object], required: [Array] }
+  },
+  {
+    name: 'get_vital_signs',
+    description: "Get patient's vital signs history",
+    inputSchema: { type: 'object', properties: [Object], required: [Array] }
+  },
+  {
+    name: 'get_lab_results',
+    description: "Get patient's lab results",
+    inputSchema: { type: 'object', properties: [Object], required: [Array] }
+  },
+  {
+    name: 'get_medications_history',
+    description: "Get patient's medication history including changes",
+    inputSchema: { type: 'object', properties: [Object], required: [Array] }
+  },
+  {
+    name: 'get_appointments',
+    description: "Get patient's Appointments",
+    inputSchema: { type: 'object', properties: [Object], required: [Array] }
+  },
+  {
+    name: 'search-pubmed',
+    description: 'Search PubMed for medical literature',
+    inputSchema: { type: 'object', properties: [Object], required: [Array] }
+  },
+  {
+    name: 'search-trials',
+    description: 'Search ClinicalTrials.gov for relevant studies',
+    inputSchema: { type: 'object', properties: [Object], required: [Array] }
+  },
+  {
+    name: 'get-drug-info',
+    description: 'Get Drug details by a generic name',
+    inputSchema: { type: 'object', properties: [Object], required: [Array] }
+  },
+  {
+    name: 'get_patient_documents',
+    description: 'Get document references for a patient',
+    inputSchema: { type: 'object', properties: [Object], required: [Array] }
+  },
+  {
+    name: 'get_binary_resource',
+    description: 'Get binary resource by ID',
+    inputSchema: { type: 'object', properties: [Object], required: [Array] }
+  },
+  {
+    name: 'sys_get_cache_stats_file',
+    description: 'Get File Cache Stats',
+    inputSchema: { type: 'object', properties: {}, required: [] }
+  }
+]
+
+manipulate the .env entry to limit the tool calling to select tool calls
+#TOOLS_TO_CALL="find_patient, search_patients, get_patient_summary_data, get_patient_observations, get_patient_conditions, get_patient_encounters, get_patient_allergies, get_patient_procedures, get_patient_careplans, get_lab_results, get_medications_history, get_appointments, search-pubmed, search-trials, get-drug-info, get_patient_documents, get_binary_resource, sys_get_cache_stats_file"
+TOOLS_TO_CALL="find_patient, search_patients, get_patient_summary_data"
+#get_patient_observations, get_patient_conditions, get_patient_encounters, get_patient_allergies, get_patient_procedures, get_patient_careplans, get_lab_results, get_medications_history, get_appointments, search-pubmed, search-trials, get-drug-info, get_patient_documents, get_binary_resource, sys_get_cache_stats_file"
+
+
+PS C:\Users\binu_\source\node\mcp-samples\server\client> node build/index.js
+[INFO] Using URL from Environment Variable (MCP_SERVER_URL): https://mcp-health-node-v1-770535842811.us-east1.run.app/mcp
+[INFO] Only calling specified tools from ENV: find_patient, search_patients, get_patient_summary_data
+Connected to server
+Available tools: [
+
+Calling tool:  find_patient
+Error calling greet tool: McpError: MCP error -32603: Missing or invalid 'firstName'.
+
+Calling tool:  search_patients
+results:
+- [
+  {
+    "resourceType": "Patient",
+    "name": [
+      {
+        "family": "Test2",
+        "given": [
+          "Name2"
+        ]
+      }
+    ],
+    "id": "6de59b97-0657-41e4-912c-be74d574d484",
+    "meta": {
+      "versionId": "2d221337-235b-4870-adbb-987f5877131b",
+      "lastUpdated": "2025-09-30T14:25:08.477+00:00"
+    }
+  },
+  {
+    "resourceType": "Patient",
+    "name": [
+      {
+        "family": "Test1",
+        "given": [
+          "Name1"
+        ]
+      }
+    ],
+    "id": "d0317049-fe96-4d41-ba31-05db3f07e2d1",
+    "meta": {
+      "versionId": "3e970959-54e5-4dc6-a5a4-253c58116ec3",
+      "lastUpdated": "2025-09-30T14:25:08.185+00:00"
+    }
+  },
+  {
+    "resourceType": "Patient",
+    "id": "6bdad3e2-7290-4923-8469-926ee7da73ca",
+    "meta": {
+      "versionId": "216c01fc-5097-4401-8601-c3f8b4cc4e36",
+      "lastUpdated": "2025-09-30T13:36:16.008+00:00"
+    },
+    "name": [
+      {
+        "use": "official",
+        "family": "Meikäläinen",
+        "given": [
+          "Marja Liisa"
+        ]
+      }
+    ],
+    "gender": "female",
+    "birthDate": "1990-01-01",
+    "telecom": [
+      {
+        "system": "phone",
+        "value": "+358-123-123-123",
+        "use": "home"
+      }
+    ]
+  },
+  {
+    "resourceType": "Patient",
+    "name": [
+      {
+        "use": "official",
+        "family": "Mehiläinen",
+        "given": [
+          "Anttoni"
+        ]
+      }
+    ],
+    "gender": "male",
+    "birthDate": "1990-01-01",
+    "id": "47185439-9d02-4483-ab6a-1de7842a8b30",
+    "meta": {
+      "versionId": "2a557008-353a-45b8-a3eb-af69275ec2f0",
+      "lastUpdated": "2025-09-30T13:20:12.547+00:00"
+    }
+  }
+]
+
+Calling tool:  get_patient_summary_data
+Error calling greet tool: McpError: MCP error -32602: MCP error -32602: patientId is required
+waitForCompletion...
+
+Calling tool:  search-pubmed
+Error calling greet tool: McpError: MCP error -32603: Cannot read properties of undefined (reading 'idlist')
+SSE transport closed.
+SSE transport error:  DOMException [AbortError]: This operation was aborted
+    at node:internal/deps/undici/undici:13510:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async StreamableHTTPClientTransport._startOrAuthSse (file:///C:/Users/binu_/source/node/mcp-samples/server/client/node_modules/@modelcontextprotocol/sdk/dist/esm/client/streamableHttp.js:84:30)
+SSE transport closed.
+SSE transport error:  DOMException [AbortError]: This operation was aborted
+    at node:internal/deps/undici/undici:13510:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async StreamableHTTPClientTransport._startOrAuthSse (file:///C:/Users/binu_/source/node/mcp-samples/server/client/node_modules/@modelcontextprotocol/sdk/dist/esm/client/streamableHttp.js:84:30)
+SSE transport closed.
+
+
+#TOOLS_TO_CALL="search-trials" #result is too long
+"derivedSection": {
+      "miscInfoModule": {
+        "versionHolder": "2025-09-30"
+      },
+      "interventionBrowseModule": {
+        "meshes": [
+          {
+            "id": "D011795",
+            "term": "Surveys and Questionnaires"
+          }
+        ],
+        "ancestors": [
+          {
+            "id": "D003625",
+            "term": "Data Collection"
+          },
+          {
+            "id": "D004812",
+            "term": "Epidemiologic Methods"
+          },
+          {
+            "id": "D008919",
+            "term": "Investigative Techniques"
+          },
+          {
+            "id": "D017531",
+            "term": "Health Care Evaluation Mechanisms"
+          },
+          {
+            "id": "D011787",
+            "term": "Quality of Health Care"
+          },
+          {
+            "id": "D017530",
+            "term": "Health Care Quality, Access, and Evaluation"
+          },
+          {
+            "id": "D011634",
+            "term": "Public Health"
+          },
+          {
+            "id": "D004778",
+            "term": "Environment and Public Health"
+          }
+        ]
+      }
+    },
+    "hasResults": false
+  }
+]
+SSE transport closed.
+SSE transport error:  DOMException [AbortError]: This operation was aborted
+    at node:internal/deps/undici/undici:13510:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async StreamableHTTPClientTransport._startOrAuthSse (file:///C:/Users/binu_/source/node/mcp-samples/server/client/node_modules/@modelcontextprotocol/sdk/dist/esm/client/streamableHttp.js:84:30)
+SSE transport closed.
+SSE transport error:  DOMException [AbortError]: This operation was aborted
+    at node:internal/deps/undici/undici:13510:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async StreamableHTTPClientTransport._startOrAuthSse (file:///C:/Users/binu_/source/node/mcp-samples/server/client/node_modules/@modelcontextprotocol/sdk/dist/esm/client/streamableHttp.js:84:30)
+SSE transport closed.
+PS C:\Users\binu_\source\node\mcp-samples\server\client>
+
+..
+Executing 1 tool(s).
+
+Calling tool:  get-drug-info
+Error calling greet tool: McpError: MCP error -32602: MCP error -32602: patientId is required
+SSE transport closed.
