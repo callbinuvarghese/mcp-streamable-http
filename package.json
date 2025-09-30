@@ -1,0 +1,32 @@
+{
+    "name": "server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "type": "module",
+    "bin": {
+        "create-mcp-server": "./build/index.js"
+    },
+    "scripts": {
+        "clean": "rimraf build",
+        "build": "npm run clean && tsc -p ./tsconfig.json" 
+    },
+    "files": [
+        "build"
+    ],
+    "keywords": [],
+    "author": "itsuki",
+    "license": "ISC",
+    "dependencies": {
+        "@modelcontextprotocol/sdk": "^1.10.1",
+        "express": "^5.1.0"
+    },
+    "devDependencies": {
+        "@types/express": "^5.0.1",
+        "@types/node": "^22.14.0",
+        "chmod-cli": "^2.0.1",
+        "cross-env": "^10.1.0",
+        "rimraf": "^6.0.1",
+        "typescript": "^5.8.3"
+    }
+}
