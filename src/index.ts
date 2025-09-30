@@ -43,10 +43,12 @@ router.get(MCP_ENDPOINT, async (req: Request, res: Response) => {
 
 app.use('/', router)
 
-const PORT = 3000
+
+const PORT = process.env.PORT || 8080;
+
 app.listen(PORT, () => {
-    console.log(`MCP Streamable HTTP Server listening on port ${PORT}`)
-})
+    console.log(`MCP Streamable HTTP Server listening on port ${PORT}`);
+});
 
 process.on('SIGINT', async () => {
     console.log('Shutting down server...')
