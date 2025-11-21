@@ -8,7 +8,7 @@ import { MCPServer } from "./server.js"
 
 const server = new MCPServer(
     new Server({
-        name: "itsuki-mcp-server",
+        name: "itbinu-mcp-server",
         version: "1.0.0"
     }, {
         capabilities: {
